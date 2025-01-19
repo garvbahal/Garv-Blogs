@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { AppContext } from "../context/AppContext";
 import Header from "../components/Header";
 import Spinner from "../components/Spinner";
+import BlogDetails from "../components/BlogDetails";
 
 const BlogPage = () => {
   const [blog, setBlog] = useState(null);
@@ -11,7 +12,7 @@ const BlogPage = () => {
   const navigate = useNavigate();
   const { loading, setLoading } = useContext(AppContext);
 
-  const baseUrl = `https://codehelp-apis.vercel.app/api/get-blogs`;
+  const baseUrl = `https://codehelp-apis.vercel.app/api/get-blog`;
 
   const blogId = location.pathname.split("/").at(-1);
 
