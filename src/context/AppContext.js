@@ -44,7 +44,6 @@ function AppContextProvider({ children }) {
 
   function handlePageChange(page) {
     navigate({ search: `?page=${page}` });
-    setPage(page);
   }
 
   const value = {

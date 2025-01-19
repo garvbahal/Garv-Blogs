@@ -15,6 +15,7 @@ function App() {
   const location = useLocation();
 
   useEffect(() => {
+    // If page is available in URL (?page=---) then set page otherwise set page to one
     const page = searchParams.get("page") ?? 1;
 
     if (location.pathname.includes("tags")) {
